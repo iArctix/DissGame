@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d8781d114c0114547bff9fe4ee525d9d
+  - enabled: 1
+    path: Assets/Scenes/DissGame.unity
+    guid: ca6e82051d4b70b42bf53f3559f2fe07
+  - enabled: 1
+    path: Assets/Scenes/Gametwo.unity
+    guid: e2153fc779140a8458e14ed9753fc227
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
