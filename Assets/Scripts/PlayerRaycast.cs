@@ -10,6 +10,8 @@ public class PlayerRaycast : MonoBehaviour
     public GameObject prompt;
     public TextMeshProUGUI prompttext;
 
+    public InventoryStats inventory;
+
     void Start()
     {
         // Find the player's camera
@@ -76,6 +78,11 @@ public class PlayerRaycast : MonoBehaviour
                 lastHitObject = null;
             }
         }
+        // Check for player input to delete apple
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            InteractPressed();
+        }
     }
 
     void AppleHit()
@@ -83,6 +90,7 @@ public class PlayerRaycast : MonoBehaviour
         Debug.Log("Apple was hit!");
         prompttext.text = "Press E TO Pickup Apple";
         prompt.SetActive(true);
+
     }
 
     void CoinHit()
@@ -120,5 +128,32 @@ public class PlayerRaycast : MonoBehaviour
         Debug.Log("Wood is no longer hit!");
         prompttext.text = " ";
         prompt.SetActive(false);
+    }
+
+    void InteractPressed()
+    {
+        if (lastHitObject != null && lastHitObject.CompareTag("Apple"))
+        {
+            Destroy(lastHitObject);
+            inventory.apples++;
+            
+            prompt.SetActive(false); // Deactivate prompt after deleting the apple
+        }
+        else if (lastHitObject != null && lastHitObject.CompareTag("Coin"))
+        {
+            Destroy(lastHitObject);
+            inventory.coins++;
+            prompt.SetActive(false);
+        }
+        else if (lastHitObject!=null && lastHitObject.CompareTag("Wood"))
+        {
+            Destroy(lastHitObject);
+            inventory.wood++;
+            prompt.SetActive(false);
+        }
+        else
+        {
+            return;
+        }
     }
 }
