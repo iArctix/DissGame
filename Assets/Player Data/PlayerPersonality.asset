@@ -17,6 +17,6 @@ MonoBehaviour:
   honesty: 0.2
   empathy: 0.8
   charisma: 0.4
-  npc1: 0
-  npc2: 0
-  npc3: 0
+  npc1: 2
+  npc2: 2
+  npc3: 2

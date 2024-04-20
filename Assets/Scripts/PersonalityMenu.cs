@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class PersonalityMenu : MonoBehaviour
 {
@@ -12,22 +13,32 @@ public class PersonalityMenu : MonoBehaviour
     public PersonalityStats stats;
 
     //sliders
-    public Slider kindnessslider; 
+    public Slider kindnessslider;
     public Image kindnessfillImage;
     public Slider empathyslider;
-    public Image empathyfillImage; 
-    public Slider honestyslider; 
-    public Image honestyfillImage; 
-    public Slider determinationslider; 
-    public Image determinationfillImage; 
-    public Slider charismaslider; 
-    public Image charismafillImage; 
+    public Image empathyfillImage;
+    public Slider honestyslider;
+    public Image honestyfillImage;
+    public Slider determinationslider;
+    public Image determinationfillImage;
+    public Slider charismaslider;
+    public Image charismafillImage;
+
+    //npcs
+    public Image billimage;
+    public Image fredimage;
+    public Image mariaimage;
+
+    public TextMeshProUGUI billtext;
+    public TextMeshProUGUI fredtext;
+    public TextMeshProUGUI mariatext;
 
 
     void Update()
     {
         openmenu();
         personalitysliders();
+        relationships();
 
     }
 
@@ -40,6 +51,7 @@ public class PersonalityMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             PlayerCamera.GetComponent<CameraRotation>().enabled = false;
             personalitysliders();
+
         }
         else if (Input.GetKeyDown(KeyCode.M) && personalityui.activeSelf)
         {
@@ -55,11 +67,11 @@ public class PersonalityMenu : MonoBehaviour
 
     void personalitysliders()
     {
-         
-        
+
+
         kindnessslider.value = stats.kindness;
         float kindnessvalue = stats.kindness;
-        Color kindnessfillColor = Color.Lerp(Color.red, Color.green, kindnessvalue); 
+        Color kindnessfillColor = Color.Lerp(Color.red, Color.green, kindnessvalue);
         kindnessfillImage.color = kindnessfillColor;
 
         empathyslider.value = stats.empathy;
@@ -81,13 +93,68 @@ public class PersonalityMenu : MonoBehaviour
         float charismavalue = stats.charisma;
         Color charismafillColor = Color.Lerp(Color.red, Color.green, charismavalue);
         charismafillImage.color = charismafillColor;
+    }
+    void relationships()
+    {
+        //Bill relationship
+        if (stats.npc1 == 1)
+        {
+            billimage.color = Color.red;
+            billtext.text = "Enemy";
+            billtext.color = Color.red;
+        }
+        else if (stats.npc1 == 2)
+        {
+            billimage.color = Color.yellow;
+            billtext.text = "Neutral";
+            billtext.color = Color.yellow;
+        }
+        else if (stats.npc1 == 3)
+        {
+            billimage.color = Color.red;
+            billtext.text = "Friend";
+            billtext.color = Color.red;
+        }
 
+        //Fred relationship
+        if (stats.npc2 == 1)
+        {
+            fredimage.color = Color.red;
+            fredtext.text = "Enemy";
+            fredtext.color = Color.red;
+        }
+        else if (stats.npc2 == 2)
+        {
+            fredimage.color = Color.yellow;
+            fredtext.text = "Neutral";
+            fredtext.color = Color.yellow;
+        }
+        else if (stats.npc2 == 3)
+        {
+            fredimage.color = Color.red;
+            fredtext.text = "Friend";
+            fredtext.color = Color.red;
+        }
 
-
-
+        //Maria relationship
+        if (stats.npc3 == 1)
+        {
+            mariaimage.color = Color.red;
+            mariatext.text = "Enemy";
+            mariatext.color = Color.red;
+        }
+        else if (stats.npc3 == 2)
+        {
+            mariaimage.color = Color.yellow;
+            mariatext.text = "Neutral";
+            mariatext.color = Color.yellow;
+        }
+        else if (stats.npc3 == 3)
+        {
+            mariaimage.color = Color.red;
+            mariatext.text = "Friend";
+            mariatext.color = Color.red;
+        }
 
     }
-
-
-
 }
