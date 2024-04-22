@@ -11,6 +11,7 @@ public class PlayerRaycast : MonoBehaviour
     public TextMeshProUGUI prompttext;
 
     public InventoryStats inventory;
+    public PickupUI pickupUI;
 
     void Start()
     {
@@ -136,7 +137,8 @@ public class PlayerRaycast : MonoBehaviour
         {
             Destroy(lastHitObject);
             inventory.apples++;
-            
+            pickupUI.DisplayPickup("Apple", 1);
+
             prompt.SetActive(false); // Deactivate prompt after deleting the apple
         }
         else if (lastHitObject != null && lastHitObject.CompareTag("Coin"))
@@ -144,12 +146,14 @@ public class PlayerRaycast : MonoBehaviour
             Destroy(lastHitObject);
             inventory.coins++;
             prompt.SetActive(false);
+            pickupUI.DisplayPickup("Coin", 1);
         }
         else if (lastHitObject!=null && lastHitObject.CompareTag("Wood"))
         {
             Destroy(lastHitObject);
             inventory.wood++;
             prompt.SetActive(false);
+            pickupUI.DisplayPickup("Wood", 1);
         }
         else
         {
