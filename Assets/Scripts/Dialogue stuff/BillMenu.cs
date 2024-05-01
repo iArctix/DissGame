@@ -13,6 +13,13 @@ public class BillMenu : MonoBehaviour
 
     public bool intrigger;
 
+    //Dialogue ui features
+    public TextMeshProUGUI button1;
+    public TextMeshProUGUI button2;
+    public TextMeshProUGUI button3;
+    public TextMeshProUGUI button4;
+    public TextMeshProUGUI Dialogue;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -58,6 +65,311 @@ public class BillMenu : MonoBehaviour
             gameplayui.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
             PlayerCamera.GetComponent<CameraRotation>().enabled = true;
+
+        }
+    }
+    void dialogueoptions()
+    {
+        if (stats.activequestnum == 1)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 2)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 3)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 4)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 5)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 6)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 7)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 8)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 9)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 10)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 11)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+        else if (stats.activequestnum == 12)
+        {
+            button1.text = "";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "";
+        }
+
+    }
+    public void buttononepress()
+    {
+        if (stats.activequestnum == 1)
+        {
+
+        }
+        else if (stats.activequestnum == 2)
+        {
+
+        }
+        else if (stats.activequestnum == 3)
+        {
+
+        }
+        else if (stats.activequestnum == 4)
+        {
+
+        }
+        else if (stats.activequestnum == 5)
+        {
+
+        }
+        else if (stats.activequestnum == 6)
+        {
+
+        }
+        else if (stats.activequestnum == 7)
+        {
+
+        }
+        else if (stats.activequestnum == 8)
+        {
+
+        }
+        else if (stats.activequestnum == 9)
+        {
+
+        }
+        else if (stats.activequestnum == 10)
+        {
+
+        }
+        else if (stats.activequestnum == 11)
+        {
+
+        }
+        else if (stats.activequestnum == 12)
+        {
+
+        }
+    }
+
+    public void buttontwopress()
+    {
+        if (stats.activequestnum == 1)
+        {
+
+        }
+        else if (stats.activequestnum == 2)
+        {
+
+        }
+        else if (stats.activequestnum == 3)
+        {
+
+        }
+        else if (stats.activequestnum == 4)
+        {
+
+        }
+        else if (stats.activequestnum == 5)
+        {
+
+        }
+        else if (stats.activequestnum == 6)
+        {
+
+        }
+        else if (stats.activequestnum == 7)
+        {
+
+        }
+        else if (stats.activequestnum == 8)
+        {
+
+        }
+        else if (stats.activequestnum == 9)
+        {
+
+        }
+        else if (stats.activequestnum == 10)
+        {
+
+        }
+        else if (stats.activequestnum == 11)
+        {
+
+        }
+        else if (stats.activequestnum == 12)
+        {
+
+        }
+    }
+    public void buttonthreepress()
+    {
+        if (stats.activequestnum == 1)
+        {
+
+        }
+        else if (stats.activequestnum == 2)
+        {
+
+        }
+        else if (stats.activequestnum == 3)
+        {
+
+        }
+        else if (stats.activequestnum == 4)
+        {
+
+        }
+        else if (stats.activequestnum == 5)
+        {
+
+        }
+        else if (stats.activequestnum == 6)
+        {
+
+        }
+        else if (stats.activequestnum == 7)
+        {
+
+        }
+        else if (stats.activequestnum == 8)
+        {
+
+        }
+        else if (stats.activequestnum == 9)
+        {
+
+        }
+        else if (stats.activequestnum == 10)
+        {
+
+        }
+        else if (stats.activequestnum == 11)
+        {
+
+        }
+        else if (stats.activequestnum == 12)
+        {
+
+        }
+    }
+    public void buttonfourpress()
+    {
+        if (stats.activequestnum == 1)
+        {
+
+        }
+        else if (stats.activequestnum == 2)
+        {
+
+        }
+        else if (stats.activequestnum == 3)
+        {
+
+        }
+        else if (stats.activequestnum == 4)
+        {
+
+        }
+        else if (stats.activequestnum == 5)
+        {
+
+        }
+        else if (stats.activequestnum == 6)
+        {
+
+        }
+        else if (stats.activequestnum == 7)
+        {
+
+        }
+        else if (stats.activequestnum == 8)
+        {
+
+        }
+        else if (stats.activequestnum == 9)
+        {
+
+        }
+        else if (stats.activequestnum == 10)
+        {
+
+        }
+        else if (stats.activequestnum == 11)
+        {
+
+        }
+        else if (stats.activequestnum == 12)
+        {
 
         }
     }

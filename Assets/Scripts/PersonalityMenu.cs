@@ -113,7 +113,7 @@ public class PersonalityMenu : MonoBehaviour
         {
             billimage.color = Color.red;
             billtext.text = "Friend";
-            billtext.color = Color.red;
+            billtext.color = Color.green;
         }
 
         //Fred relationship
@@ -133,7 +133,7 @@ public class PersonalityMenu : MonoBehaviour
         {
             fredimage.color = Color.red;
             fredtext.text = "Friend";
-            fredtext.color = Color.red;
+            fredtext.color = Color.green;
         }
 
         //Maria relationship
@@ -153,7 +153,7 @@ public class PersonalityMenu : MonoBehaviour
         {
             mariaimage.color = Color.red;
             mariatext.text = "Friend";
-            mariatext.color = Color.red;
+            mariatext.color = Color.green;
         }
 
     }
