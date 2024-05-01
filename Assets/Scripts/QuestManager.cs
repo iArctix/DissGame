@@ -29,15 +29,15 @@ public class QuestManager : MonoBehaviour
         }
         else if(stats.activequestnum == 3)
         {
-
+            questprompt.text = "Gather or steal 5 apples";
         }
         else if (stats.activequestnum == 4)
         {
-
+            questprompt.text = "Give the apples to chosen villager";
         }
         else if (stats.activequestnum == 5)
         {
-
+            questprompt.text = "Talk to the queen";
         }
         else if (stats.activequestnum == 6)
         {

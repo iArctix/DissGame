@@ -73,11 +73,11 @@ public class MariaMenu : MonoBehaviour
     {
         if(stats.activequestnum == 1)
         {
-            button1.text = "";
-            button2.text = "";
+            button1.text = "Okay i happily will thankyou for the welcome";
+            button2.text = "Okay i guess";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Hello Welcome to my town to live here you may have to do some tasks first. Please go either ";
         }
         else if (stats.activequestnum == 2)
         {
@@ -85,7 +85,7 @@ public class MariaMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Yeah well you will find villager fred next to me in the town or venture to the market to find peasant Bill";
         }
         else if(stats.activequestnum == 3)
         {
@@ -173,7 +173,7 @@ public class MariaMenu : MonoBehaviour
     {
         if (stats.activequestnum == 1)
         {
-           
+           stats.activequestnum ++;
         }
         else if (stats.activequestnum == 2)
         {
@@ -225,7 +225,7 @@ public class MariaMenu : MonoBehaviour
     {
         if (stats.activequestnum == 1)
         {
-            
+            stats.activequestnum++;
         }
         else if (stats.activequestnum == 2)
         {

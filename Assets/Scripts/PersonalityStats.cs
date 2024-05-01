@@ -25,4 +25,27 @@ public class PersonalityStats : ScriptableObject
     //Quest Number
     public int activequestnum = 1;
 
+    //QUEST LIST
+    /*    
+     1- Talk to queen
+    2- Help Bill of fred
+    3- Gather or steal 5 apples
+    4- donate the apples
+    5- go back to the queen
+    
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     */
+
 }

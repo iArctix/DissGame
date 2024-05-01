@@ -44,6 +44,7 @@ public class FredMenu : MonoBehaviour
         if (intrigger)
         {
             openmenu();
+            dialogueoptions();
         }
 
     }
@@ -72,19 +73,19 @@ public class FredMenu : MonoBehaviour
     {
         if (stats.activequestnum == 1)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            button1.text = " ";
+            button2.text = " ";
+            button3.text = " ";
+            button4.text = " ";
+            Dialogue.text = "Hey im fred welcome to town i think the queen nwants to talk";
         }
         else if (stats.activequestnum == 2)
         {
-            button1.text = "";
-            button2.text = "";
+            button1.text = "Yes of course i will ";
+            button2.text = "Well i suppose i will ";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Oh hello there sir you must be new, could you fetch me some apples for my stew i cant be bothered to get some but would be lovely";
         }
         else if (stats.activequestnum == 3)
         {

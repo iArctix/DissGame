@@ -44,6 +44,7 @@ public class BillMenu : MonoBehaviour
         if (intrigger)
         {
             openmenu();
+            dialogueoptions();
         }
        
     }
@@ -72,19 +73,19 @@ public class BillMenu : MonoBehaviour
     {
         if (stats.activequestnum == 1)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            button1.text = " ";
+            button2.text = " ";
+            button3.text = " ";
+            button4.text = " ";
+            Dialogue.text = "Hey im Bill welcome to town i think the queen wants to talk";
         }
         else if (stats.activequestnum == 2)
         {
-            button1.text = "";
-            button2.text = "";
+            button1.text = "Of course i would love to help";
+            button2.text = "I guess i will for a price";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Hello could you please help im stuggling to make some money and would love some apples to sell ive fallen on hard times recently";
         }
         else if (stats.activequestnum == 3)
         {
