@@ -20,6 +20,8 @@ public class FredMenu : MonoBehaviour
     public TextMeshProUGUI button4;
     public TextMeshProUGUI Dialogue;
 
+    public InventoryStats inventory;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -89,19 +91,52 @@ public class FredMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 3)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            if(stats.applechocie == 1)
+            {
+                button1.text = "Here have the apples (- 5 apples)";
+                button2.text = "Here i have the apples but i want some sort of payment thanks( +40 coins)";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh lovely please give me 5 apples when you have gotten them";
+            }
+            else if(stats.applechocie == 2)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Why would you help the peasant over me? Leave my sight";
+            }
+
         }
         else if (stats.activequestnum == 4)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            if(stats.npc2 == 1)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh its the charity worked, the queen wants to talk";
+            }
+            else if (stats.npc2 == 2)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh hello the queen was requesting you ";
+            }
+            else
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh hello friend the apple stew was lovely i apprecitae the help friend";
+            }
+            
+                    
         }
         else if (stats.activequestnum == 5)
         {
@@ -177,11 +212,31 @@ public class FredMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 2)
         {
-
+            stats.activequestnum += 1;
+            stats.determination += 0.1f;
+            stats.charisma += 0.1f;
+            stats.npc1 -= 1f;
+            stats.npc2 += 1f;
+            stats.applechocie = 1;
         }
         else if (stats.activequestnum == 3)
         {
+            if (stats.applechocie == 1)
+            {
+                if(inventory.apples >= 5)
+                {
+                    stats.activequestnum += 1;
+                    inventory.apples -= 5;
 
+                    stats.kindness += 0.3f;
+                    stats.determination += 0.2f;
+
+                }
+            }
+            else if (stats.applechocie == 2)
+            {
+                
+            }
         }
         else if (stats.activequestnum == 4)
         {
@@ -229,11 +284,34 @@ public class FredMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 2)
         {
-
+            stats.activequestnum += 1;
+            stats.determination += 0.1f;
+            stats.charisma += 0.1f;
+            stats.npc1 -= 1f;
+            stats.npc2 += 1f;
+            stats.applechocie = 1;
         }
         else if (stats.activequestnum == 3)
         {
+            if (stats.applechocie == 1)
+            {
+                if (inventory.apples >= 5)
+                {
+                    stats.activequestnum += 1;
+                    inventory.apples -= 5;
+                    inventory.coins += 40;
 
+                    stats.kindness -= 0.2f;
+                    stats.empathy += 0.1f;
+                    stats.honesty += 0.3f;
+                    stats.npc2 -= 1f;
+
+                }
+            }
+            else if (stats.applechocie == 2)
+            {
+
+            }
         }
         else if (stats.activequestnum == 4)
         {

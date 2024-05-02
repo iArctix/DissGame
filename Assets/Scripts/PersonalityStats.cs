@@ -22,8 +22,9 @@ public class PersonalityStats : ScriptableObject
     //maria
     public float npc3 = 2f;
 
-    //Quest Number
+    //Quest stuff
     public int activequestnum = 1;
+    public int applechocie = 0 ; // 1= fred  //2 = bill
 
     //QUEST LIST
     /*    

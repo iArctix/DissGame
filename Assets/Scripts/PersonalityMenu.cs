@@ -111,7 +111,7 @@ public class PersonalityMenu : MonoBehaviour
         }
         else if (stats.npc1 == 3)
         {
-            billimage.color = Color.red;
+            billimage.color = Color.green;
             billtext.text = "Friend";
             billtext.color = Color.green;
         }
@@ -131,7 +131,7 @@ public class PersonalityMenu : MonoBehaviour
         }
         else if (stats.npc2 == 3)
         {
-            fredimage.color = Color.red;
+            fredimage.color = Color.green;
             fredtext.text = "Friend";
             fredtext.color = Color.green;
         }
@@ -151,7 +151,7 @@ public class PersonalityMenu : MonoBehaviour
         }
         else if (stats.npc3 == 3)
         {
-            mariaimage.color = Color.red;
+            mariaimage.color = Color.green;
             mariatext.text = "Friend";
             mariatext.color = Color.green;
         }

@@ -20,6 +20,8 @@ public class MariaMenu : MonoBehaviour
     public TextMeshProUGUI button4;
     public TextMeshProUGUI Dialogue;
 
+    public InventoryStats inventory;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -77,7 +79,7 @@ public class MariaMenu : MonoBehaviour
             button2.text = "Okay i guess";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "Hello Welcome to my town to live here you may have to do some tasks first. Please go either ";
+            Dialogue.text = "Hello Welcome to my town to live here you may have to do some tasks first. Please go either help the villager or the peasant ";
         }
         else if (stats.activequestnum == 2)
         {

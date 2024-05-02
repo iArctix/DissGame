@@ -20,6 +20,8 @@ public class BillMenu : MonoBehaviour
     public TextMeshProUGUI button4;
     public TextMeshProUGUI Dialogue;
 
+    public InventoryStats inventory;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -89,11 +91,22 @@ public class BillMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 3)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            if (stats.applechocie == 1)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh okay thats fine i guess i will manage as i always do";
+            }
+            else if (stats.applechocie == 2)
+            {
+                button1.text = "Here have the apples for free i kn ow times are hard (-5 apples) ";
+                button2.text = "I have the apples but i want some sort of payment in return (+ 20 coins)";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Wow how generous please hand them over when you can";
+            }
         }
         else if (stats.activequestnum == 4)
         {
@@ -177,11 +190,32 @@ public class BillMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 2)
         {
-
+            stats.activequestnum += 1;
+            stats.empathy += 0.2f;
+            stats.kindness += 0.1f;
+            stats.charisma += 0.1f;
+            stats.npc1 += 1f;
+            stats.npc2 -= 1f;
+            stats.applechocie = 2;
         }
         else if (stats.activequestnum == 3)
         {
+            if (stats.applechocie == 1)
+            {
+               
+            }
+            else if (stats.applechocie == 2)
+            {
+                if (inventory.apples >= 5)
+                {
+                    stats.activequestnum += 1;
+                    inventory.apples -= 5;
 
+                    stats.kindness += 0.2f;
+                    stats.empathy += 0.2f;
+                    stats.honesty += 0.2f;
+                }
+            }
         }
         else if (stats.activequestnum == 4)
         {
@@ -229,14 +263,61 @@ public class BillMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 2)
         {
-
+            stats.activequestnum += 1;
+            stats.empathy += 0.2f;
+            stats.kindness -= 0.1f;
+            stats.charisma -= 0.1f;
+            stats.npc1 += 1f;
+            stats.npc2 -= 1f;
+            stats.applechocie = 2;
         }
         else if (stats.activequestnum == 3)
         {
+            if (stats.applechocie == 1)
+            {
+                
+            }
+            else if (stats.applechocie == 2)
+            {
+                if (inventory.apples >= 5)
+                {
+                    stats.activequestnum += 1;
+                    inventory.coins += 20;
 
+                    stats.kindness -= 0.2f;
+                    stats.empathy += 0.1f;
+                    stats.honesty += 0.3f;
+                    stats.charisma += 0.2f;
+                    stats.npc1 -= 1f;
+                }
+            }
         }
         else if (stats.activequestnum == 4)
         {
+            if (stats.npc2 == 1)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh its you, i think the queen wants to talk bye";
+            }
+            else if (stats.npc2 == 2)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh hello the queen is requesting you ";
+            }
+            else
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh hi friend thanks for the help the queen wants to talk. See you soon";
+            }
 
         }
         else if (stats.activequestnum == 5)
