@@ -110,11 +110,30 @@ public class BillMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 4)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            if (stats.npc1 == 1)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh its you, i think the queen wants to talk bye";
+            }
+            else if (stats.npc1 == 2)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh hello the queen is requesting you ";
+            }
+            else
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh hi friend thanks for the help the queen wants to talk. See you soon";
+            }
         }
         else if (stats.activequestnum == 5)
         {
@@ -294,30 +313,7 @@ public class BillMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 4)
         {
-            if (stats.npc2 == 1)
-            {
-                button1.text = "";
-                button2.text = "";
-                button3.text = "";
-                button4.text = "";
-                Dialogue.text = "Oh its you, i think the queen wants to talk bye";
-            }
-            else if (stats.npc2 == 2)
-            {
-                button1.text = "";
-                button2.text = "";
-                button3.text = "";
-                button4.text = "";
-                Dialogue.text = "Oh hello the queen is requesting you ";
-            }
-            else
-            {
-                button1.text = "";
-                button2.text = "";
-                button3.text = "";
-                button4.text = "";
-                Dialogue.text = "Oh hi friend thanks for the help the queen wants to talk. See you soon";
-            }
+           
 
         }
         else if (stats.activequestnum == 5)

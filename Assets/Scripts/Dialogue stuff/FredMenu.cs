@@ -117,7 +117,7 @@ public class FredMenu : MonoBehaviour
                 button2.text = "";
                 button3.text = "";
                 button4.text = "";
-                Dialogue.text = "Oh its the charity worked, the queen wants to talk";
+                Dialogue.text = "Oh its the charity worker, the queen wants to talk";
             }
             else if (stats.npc2 == 2)
             {
@@ -133,7 +133,7 @@ public class FredMenu : MonoBehaviour
                 button2.text = "";
                 button3.text = "";
                 button4.text = "";
-                Dialogue.text = "Oh hello friend the apple stew was lovely i apprecitae the help friend";
+                Dialogue.text = "Oh hello friend the apple stew was lovely i appreciate the help friend";
             }
             
                     

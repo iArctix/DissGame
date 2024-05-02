@@ -26,13 +26,14 @@ public class PersonalityStats : ScriptableObject
     public int activequestnum = 1;
     public int applechocie = 0 ; // 1= fred  //2 = bill
 
+
     //QUEST LIST
     /*    
      1- Talk to queen
     2- Help Bill of fred
     3- Gather or steal 5 apples
-    4- donate the apples
-    5- go back to the queen
+    4- go back to the queen
+    5- 
     
      
      

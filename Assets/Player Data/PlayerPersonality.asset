@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf9bf75f717f5945b85221863dafcbe, type: 3}
   m_Name: PlayerPersonality
   m_EditorClassIdentifier: 
-  kindness: 0.5
+  kindness: 0.8
   determination: 0.5
-  honesty: 0.5
-  empathy: 0.5
-  charisma: 0.5
-  npc1: 0.5
-  npc2: 0.5
-  npc3: 0.5
-  activequestnum: 1
+  honesty: 0.7
+  empathy: 0.9
+  charisma: 0.6
+  npc1: 3
+  npc2: 1
+  npc3: 2
+  activequestnum: 4
+  applechocie: 2

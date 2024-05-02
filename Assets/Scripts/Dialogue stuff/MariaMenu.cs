@@ -95,7 +95,7 @@ public class MariaMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Come talk to me later after you have finished your task";
         }
         else if(stats.activequestnum == 4)
         {
@@ -103,7 +103,7 @@ public class MariaMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Hello therev thanks for helping my villager, if you want to live here more work must be done ";
         }
         else if (stats.activequestnum == 5)
         {
