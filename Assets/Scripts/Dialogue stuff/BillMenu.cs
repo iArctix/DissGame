@@ -101,7 +101,7 @@ public class BillMenu : MonoBehaviour
             }
             else if (stats.applechocie == 2)
             {
-                button1.text = "Here have the apples for free i kn ow times are hard (-5 apples) ";
+                button1.text = "Here have the apples for free i know times are hard (-5 apples) ";
                 button2.text = "I have the apples but i want some sort of payment in return (+ 20 coins)";
                 button3.text = "";
                 button4.text = "";
@@ -135,29 +135,48 @@ public class BillMenu : MonoBehaviour
                 Dialogue.text = "Oh hi friend thanks for the help the queen wants to talk. See you soon";
             }
         }
-        else if (stats.activequestnum == 5)
+        else if (stats.activequestnum == 5) //Help BIll quest
         {
-            button1.text = "";
-            button2.text = "";
+            button1.text = "Im sure i can help out my friend no worries";
+            button2.text = "Thats a lot of work this better be worth my while";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Hello again so as you know im struggling at the moment and need want to get a home of my own now for that i need some wood so could you help fetch me some ";
         }
         else if (stats.activequestnum == 6)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            button1.text = "Here i have the wood you need (-10 wood)";
+            button2.text = "Im friends with the queen if i give you some she will cover the rest im sure (-7 wood) (Need to be friends with the queen";
+            button3.text = "I cant be bothered to go gather heres some gold you can buy some instead (-30 gold)";
+            button4.text = "Here but i want payment (-10 wood +20 gold)";
+            Dialogue.text = "Hey i need 10 wood to be able to start my house";
         }
         else if (stats.activequestnum == 7)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            if (stats.npc1 == 1)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Thanks for nothing anyway the queen wants to talk again ";
+            }
+            else if (stats.npc1 == 2)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Appreciate your assistance you dont understand how hard its been. the queen wants you again i think";
+            }
+            else
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Friend you are honestly a life saver the queen wants to talk i heard";
+            }
         }
         else if (stats.activequestnum == 8)
         {
@@ -242,11 +261,19 @@ public class BillMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 5)
         {
-
+            stats.activequestnum++;
         }
         else if (stats.activequestnum == 6)
         {
+            if (inventory.wood >= 10)
+            {
+                stats.activequestnum++;
+                inventory.wood -= 10;
+                stats.npc1 += 1;
+                stats.determination += 0.2f;
+                stats.kindness += 0.2f;
 
+            }
         }
         else if (stats.activequestnum == 7)
         {
@@ -303,10 +330,10 @@ public class BillMenu : MonoBehaviour
                     stats.activequestnum += 1;
                     inventory.coins += 20;
 
-                    stats.kindness -= 0.2f;
-                    stats.empathy += 0.1f;
-                    stats.honesty += 0.3f;
-                    stats.charisma += 0.2f;
+                    stats.kindness -= 0.3f;
+                    stats.empathy -= 0.3f;
+                    stats.honesty += 0.2f;
+                    stats.charisma += 0.1f;
                     stats.npc1 -= 1f;
                 }
             }
@@ -318,11 +345,19 @@ public class BillMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 5)
         {
-
+            stats.activequestnum++;
         }
         else if (stats.activequestnum == 6)
         {
+            if (inventory.wood >= 7 && stats.npc3 == 3)
+            {
+                stats.activequestnum++;
+                inventory.wood -= 7;
+                stats.npc1 += 1;
+                stats.kindness += 0.1f;
+                stats.charisma += 0.3f;
 
+            }
         }
         else if (stats.activequestnum == 7)
         {
@@ -373,7 +408,18 @@ public class BillMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 6)
         {
+            if(inventory.coins >= 30)
+            {
+                stats.activequestnum++; 
+                inventory.coins -= 30;
+                stats.determination -= 0.5f;
+                stats.kindness -= 0.2f;
+                stats.honesty += 0.1f;
+                stats.npc1 -= 1;
 
+                
+
+            }
         }
         else if (stats.activequestnum == 7)
         {
@@ -424,7 +470,20 @@ public class BillMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 6)
         {
+            if (inventory.wood >= 10)
+            {
+                stats.activequestnum++;
+                inventory.coins += 20;
+                inventory.wood -= 10;
+                stats.determination -= 0.2f;
+                stats.kindness -= 0.4f;
+                stats.honesty += 0.2f;
+                stats.empathy -= 0.4f;
+                stats.npc1 -= 2;
 
+
+
+            }
         }
         else if (stats.activequestnum == 7)
         {

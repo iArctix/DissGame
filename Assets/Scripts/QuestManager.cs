@@ -10,7 +10,10 @@ public class QuestManager : MonoBehaviour
     public TextMeshProUGUI questprompt;
 
     // Start is called before the first frame update
-
+    private void Start()
+    {
+        stats.activequestnum = 1;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -37,15 +40,15 @@ public class QuestManager : MonoBehaviour
         }
         else if (stats.activequestnum == 5)
         {
-            questprompt.text = "Talk to the queen";
+            questprompt.text = "Talk to bill at the market";
         }
         else if (stats.activequestnum == 6)
         {
-
+            questprompt.text = "Help Bill with his problem, gather wood or pay him";
         }
         else if (stats.activequestnum == 7)
         {
-
+            questprompt.text = "Return back to the queen";
         }
         else if (stats.activequestnum == 8)
         {

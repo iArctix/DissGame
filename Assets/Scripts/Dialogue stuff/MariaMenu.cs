@@ -99,11 +99,11 @@ public class MariaMenu : MonoBehaviour
         }
         else if(stats.activequestnum == 4)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
+            button1.text = "Okay i will happily go talk i want to live here";
+            button2.text = "Why would i want to live here anyway but okay fine";
+            button3.text = "Okay if i help could you make it worth my while? (+20 coins) (Need 0.8 charisma)";
             button4.text = "";
-            Dialogue.text = "Hello therev thanks for helping my villager, if you want to live here more work must be done ";
+            Dialogue.text = "Hello there thanks for helping my villager, if you want to live here more work must be done, now next i want you to help bill he wanted to talk";
         }
         else if (stats.activequestnum == 5)
         {
@@ -111,7 +111,7 @@ public class MariaMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Bill is waiting in the market for you return later when you have finished";
         }
         else if (stats.activequestnum == 6)
         {
@@ -119,7 +119,7 @@ public class MariaMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "You still havent helped Bill come back when you have finished";
         }
         else if (stats.activequestnum == 7)
         {
@@ -127,7 +127,18 @@ public class MariaMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            if (stats.npc1 == 1)
+            {
+                Dialogue.text = "Well you helped him but in a not very nice way we dont like that kin dof behaviour here. Anyway next i wnat you to help out fred find him in town near me";
+            }
+            else if (stats.npc1 == 2)
+            {
+                Dialogue.text = "Thanks for helping him out thats kind of you. Anyway next i want you to help out fred find him in town near me ";
+            }
+            else
+            {
+                Dialogue.text = "You have been really kind to Bill he sees you as a friend now  Anyway next i want you to help out fred find him in town near me";
+            }
         }
         else if (stats.activequestnum == 8)
         {
@@ -176,6 +187,9 @@ public class MariaMenu : MonoBehaviour
         if (stats.activequestnum == 1)
         {
            stats.activequestnum ++;
+            stats.kindness += 0.1f;
+            stats.charisma += 0.2f;
+            stats.determination += 0.2f;
         }
         else if (stats.activequestnum == 2)
         {
@@ -187,7 +201,10 @@ public class MariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 4)
         {
-
+            stats.activequestnum++;
+            stats.npc3 += 1;
+            stats.kindness += 0.2f;
+            stats.charisma += 0.2f;
         }
         else if (stats.activequestnum == 5)
         {
@@ -228,6 +245,11 @@ public class MariaMenu : MonoBehaviour
         if (stats.activequestnum == 1)
         {
             stats.activequestnum++;
+            stats.activequestnum++;
+            stats.kindness -= 0.1f;
+            stats.charisma += 0.1f;
+            stats.determination -= 0.2f;
+            stats.honesty += 0.1f;
         }
         else if (stats.activequestnum == 2)
         {
@@ -239,7 +261,11 @@ public class MariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 4)
         {
-
+            stats.activequestnum++;
+            stats.npc3 -= 1;
+            stats.kindness -= 0.4f;
+            stats.charisma += 0.1f;
+            stats.honesty += 0.2f;
         }
         else if (stats.activequestnum == 5)
         {
@@ -290,7 +316,15 @@ public class MariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 4)
         {
-
+            if(stats.charisma >= 0.8f)
+            {
+                stats.activequestnum++;
+                inventory.coins += 20;
+                stats.kindness += 0.1f;
+                stats.charisma += 0.2f;
+                stats.honesty += 0.3f;
+                stats.empathy -= 0.3f;
+            }
         }
         else if (stats.activequestnum == 5)
         {

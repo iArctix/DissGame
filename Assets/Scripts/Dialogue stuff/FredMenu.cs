@@ -133,26 +133,64 @@ public class FredMenu : MonoBehaviour
                 button2.text = "";
                 button3.text = "";
                 button4.text = "";
-                Dialogue.text = "Oh hello friend the apple stew was lovely i appreciate the help friend";
+                Dialogue.text = "Oh hello friend the apple stew was lovely i appreciate the help friend, The queen wanted to see you i think";
             }
             
                     
         }
         else if (stats.activequestnum == 5)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            if (stats.npc2 == 1)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh its you, Bill wanted to talk go see him i dont want to talk to you";
+            }
+            else if (stats.npc2 == 2)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh hello there bills in the market if u are looking for him ";
+            }
+            else
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh hello friend Bills waiting in the market i think he wanted your help";
+            }
         }
         else if (stats.activequestnum == 6)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+            if (stats.npc2 == 1)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Go do your work for bill peasant i dont want to see you";
+            }
+            else if (stats.npc2 == 2)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh its kind you are helping bill good luck, wood can be found in the woods you can gather some";
+            }
+            else
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Oh hello friend if you are looking for wood i reccomend the woods i wish i could help";
+            }
         }
         else if (stats.activequestnum == 7)
         {
@@ -160,7 +198,7 @@ public class FredMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Oh so you helped him out huh well the queen wants to hear from you again";
         }
         else if (stats.activequestnum == 8)
         {
@@ -230,6 +268,7 @@ public class FredMenu : MonoBehaviour
 
                     stats.kindness += 0.3f;
                     stats.determination += 0.2f;
+                    stats.empathy -= 0.4f;
 
                 }
             }
@@ -301,10 +340,11 @@ public class FredMenu : MonoBehaviour
                     inventory.apples -= 5;
                     inventory.coins += 40;
 
-                    stats.kindness -= 0.2f;
-                    stats.empathy += 0.1f;
+                    stats.kindness -= 0.3f;
+                    stats.empathy -= 0.3f;
                     stats.honesty += 0.3f;
                     stats.npc2 -= 1f;
+                    stats.determination -= 0.2f;
 
                 }
             }
