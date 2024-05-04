@@ -22,6 +22,8 @@ public class BillMenu : MonoBehaviour
 
     public InventoryStats inventory;
 
+    public StatChangeDisplay statChangeDisplay;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -230,8 +232,11 @@ public class BillMenu : MonoBehaviour
         {
             stats.activequestnum += 1;
             stats.empathy += 0.2f;
+            statChangeDisplay.DisplayStatChange("Empathy: +0.2", Color.green);
             stats.kindness += 0.1f;
+            statChangeDisplay.DisplayStatChange("Kindess: +0.1", Color.green);
             stats.charisma += 0.1f;
+            statChangeDisplay.DisplayStatChange("Charisma: +0.1", Color.green);
             stats.npc1 += 1f;
             stats.npc2 -= 1f;
             stats.applechocie = 2;
@@ -250,8 +255,11 @@ public class BillMenu : MonoBehaviour
                     inventory.apples -= 5;
 
                     stats.kindness += 0.2f;
+                    statChangeDisplay.DisplayStatChange("Kindness: +0.2", Color.green);
                     stats.empathy += 0.2f;
+                    statChangeDisplay.DisplayStatChange("Empathy: +0.2", Color.green);
                     stats.honesty += 0.2f;
+                    statChangeDisplay.DisplayStatChange("Honesty: +0.2", Color.green);
                 }
             }
         }
@@ -271,7 +279,9 @@ public class BillMenu : MonoBehaviour
                 inventory.wood -= 10;
                 stats.npc1 += 1;
                 stats.determination += 0.2f;
+                statChangeDisplay.DisplayStatChange("Determination: +0.2", Color.green);
                 stats.kindness += 0.2f;
+                statChangeDisplay.DisplayStatChange("Honesty: +0.2", Color.green);
 
             }
         }
@@ -311,8 +321,11 @@ public class BillMenu : MonoBehaviour
         {
             stats.activequestnum += 1;
             stats.empathy += 0.2f;
+            statChangeDisplay.DisplayStatChange("Empathy: +0.2", Color.green);
             stats.kindness -= 0.1f;
+            statChangeDisplay.DisplayStatChange("Kindess: -0.1", Color.red);
             stats.charisma -= 0.1f;
+            statChangeDisplay.DisplayStatChange("Charisma: +0.3", Color.red);
             stats.npc1 += 1f;
             stats.npc2 -= 1f;
             stats.applechocie = 2;
@@ -331,9 +344,13 @@ public class BillMenu : MonoBehaviour
                     inventory.coins += 20;
 
                     stats.kindness -= 0.3f;
+                    statChangeDisplay.DisplayStatChange("Kindness: -0.3", Color.red);
                     stats.empathy -= 0.3f;
+                    statChangeDisplay.DisplayStatChange("Empathy: +0.3", Color.red);
                     stats.honesty += 0.2f;
+                    statChangeDisplay.DisplayStatChange("Honesty: +0.2", Color.green);
                     stats.charisma += 0.1f;
+                    statChangeDisplay.DisplayStatChange("Charisma: +0.1", Color.green);
                     stats.npc1 -= 1f;
                 }
             }
@@ -355,7 +372,9 @@ public class BillMenu : MonoBehaviour
                 inventory.wood -= 7;
                 stats.npc1 += 1;
                 stats.kindness += 0.1f;
+                statChangeDisplay.DisplayStatChange("Kindess: +0.1", Color.green);
                 stats.charisma += 0.3f;
+                statChangeDisplay.DisplayStatChange("Charisma: +0.3", Color.green);
 
             }
         }
@@ -413,8 +432,11 @@ public class BillMenu : MonoBehaviour
                 stats.activequestnum++; 
                 inventory.coins -= 30;
                 stats.determination -= 0.5f;
+                statChangeDisplay.DisplayStatChange("Determination: -0.5", Color.red);
                 stats.kindness -= 0.2f;
+                statChangeDisplay.DisplayStatChange("Kindness: -0.2", Color.green);
                 stats.honesty += 0.1f;
+                statChangeDisplay.DisplayStatChange("Honesty: +0.1", Color.green);
                 stats.npc1 -= 1;
 
                 
@@ -476,9 +498,13 @@ public class BillMenu : MonoBehaviour
                 inventory.coins += 20;
                 inventory.wood -= 10;
                 stats.determination -= 0.2f;
+                statChangeDisplay.DisplayStatChange("Determination: +0.2", Color.red);
                 stats.kindness -= 0.4f;
+                statChangeDisplay.DisplayStatChange("Kindness: -0.4", Color.green);
                 stats.honesty += 0.2f;
+                statChangeDisplay.DisplayStatChange("Honesty: +0.2", Color.green);
                 stats.empathy -= 0.4f;
+                statChangeDisplay.DisplayStatChange("Empathy: -0.4", Color.red);
                 stats.npc1 -= 2;
 
 

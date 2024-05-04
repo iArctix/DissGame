@@ -21,6 +21,7 @@ public class FredMenu : MonoBehaviour
     public TextMeshProUGUI Dialogue;
 
     public InventoryStats inventory;
+    public StatChangeDisplay statChangeDisplay;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -252,7 +253,9 @@ public class FredMenu : MonoBehaviour
         {
             stats.activequestnum += 1;
             stats.determination += 0.1f;
+            statChangeDisplay.DisplayStatChange("Determination: +0.1", Color.green);
             stats.charisma += 0.1f;
+            statChangeDisplay.DisplayStatChange("Charisma: +0.1", Color.green);
             stats.npc1 -= 1f;
             stats.npc2 += 1f;
             stats.applechocie = 1;
@@ -267,8 +270,11 @@ public class FredMenu : MonoBehaviour
                     inventory.apples -= 5;
 
                     stats.kindness += 0.3f;
+                    statChangeDisplay.DisplayStatChange("Kindness: +0.3", Color.green);
                     stats.determination += 0.2f;
+                    statChangeDisplay.DisplayStatChange("Determination: +0.2", Color.green);
                     stats.empathy -= 0.4f;
+                    statChangeDisplay.DisplayStatChange("Empathy: -0.4", Color.red);
 
                 }
             }
@@ -325,7 +331,9 @@ public class FredMenu : MonoBehaviour
         {
             stats.activequestnum += 1;
             stats.determination += 0.1f;
+            statChangeDisplay.DisplayStatChange("Determination: +0.1", Color.green);
             stats.charisma += 0.1f;
+            statChangeDisplay.DisplayStatChange("Charisma: +0.1", Color.green);
             stats.npc1 -= 1f;
             stats.npc2 += 1f;
             stats.applechocie = 1;
@@ -341,10 +349,16 @@ public class FredMenu : MonoBehaviour
                     inventory.coins += 40;
 
                     stats.kindness -= 0.3f;
+                    statChangeDisplay.DisplayStatChange("Kindess: -0.3", Color.red);
                     stats.empathy -= 0.3f;
+                    statChangeDisplay.DisplayStatChange("Empathy: -0.3", Color.red);
                     stats.honesty += 0.3f;
+                    statChangeDisplay.DisplayStatChange("Honesty: +0.3", Color.green);
                     stats.npc2 -= 1f;
                     stats.determination -= 0.2f;
+                    statChangeDisplay.DisplayStatChange("Determiantion: -0.2", Color.red);
+
+
 
                 }
             }
