@@ -103,6 +103,7 @@ public class PlayerRaycast : MonoBehaviour
     {
         Debug.Log("Apple was hit!");
         prompttext.text = "Press E TO Pickup Apple";
+        prompttext.color = Color.green;
         prompt.SetActive(true);
 
     }
@@ -111,9 +112,10 @@ public class PlayerRaycast : MonoBehaviour
     {
         Debug.Log("CoinHit function called!"); // Check if the function is called
         Debug.Log("Coin was hit!");
-        prompttext.text = "Press E TO Pickup Coins";
+        prompttext.text = "Press E TO Steal Coins";
         prompt.SetActive(true);
         Debug.Log("Coin prompt activated!"); // Check if the prompt activation is reached
+        prompttext.color = Color.red;
     }
 
     void WoodHit()
@@ -121,6 +123,7 @@ public class PlayerRaycast : MonoBehaviour
         Debug.Log("Wood was hit!");
         prompttext.text = "Press E TO Pickup Wood";
         prompt.SetActive(true);
+        prompttext.color = Color.green;
     }
 
     void AppleNotHit()
@@ -128,6 +131,7 @@ public class PlayerRaycast : MonoBehaviour
         Debug.Log("Apple is no longer hit!");
         prompttext.text = " ";
         prompt.SetActive(false);
+        prompttext.color = Color.white;
     }
 
     void CoinNotHit()
@@ -135,6 +139,7 @@ public class PlayerRaycast : MonoBehaviour
         Debug.Log("Coin is no longer hit!");
         prompttext.text = " ";
         prompt.SetActive(false);
+        prompttext.color = Color.white;
     }
 
     void WoodNotHit()
@@ -142,12 +147,14 @@ public class PlayerRaycast : MonoBehaviour
         Debug.Log("Wood is no longer hit!");
         prompttext.text = " ";
         prompt.SetActive(false);
+        prompttext.color = Color.white;
     }
     void StolenAppleHit()
     {
        
         prompttext.text = "Press E TO Steal Apple";
         prompt.SetActive(true);
+        prompttext.color = Color.red;
 
     }
     void StolenAppleNotHit()
@@ -155,6 +162,7 @@ public class PlayerRaycast : MonoBehaviour
       
         prompttext.text = " ";
         prompt.SetActive(false);
+        prompttext.color = Color.white;
     }
 
     void InteractPressed()
