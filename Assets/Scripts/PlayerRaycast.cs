@@ -13,6 +13,7 @@ public class PlayerRaycast : MonoBehaviour
     public InventoryStats inventory;
     public PersonalityStats stats;
     public PickupUI pickupUI;
+    public StatChangeDisplay statChangeDisplay;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerRaycast : MonoBehaviour
         {
             Debug.LogError("PlayerRaycast script requires a camera as a child of the player.");
         }
+        
     }
 
     void Update()
@@ -173,6 +175,8 @@ public class PlayerRaycast : MonoBehaviour
             inventory.apples++;
             pickupUI.DisplayPickup("Apple", 1);
             stats.determination += 0.05f;
+            statChangeDisplay.DisplayStatChange("Kindness: +0.05", Color.green);
+            statChangeDisplay.DisplayStatChange("Determination: +0.05", Color.green);
             stats.honesty += 0.05f;
 
             prompt.SetActive(false); // Deactivate prompt after deleting the apple
@@ -183,6 +187,10 @@ public class PlayerRaycast : MonoBehaviour
             inventory.coins++;
             prompt.SetActive(false);
             pickupUI.DisplayPickup("Coin", 1);
+            stats.kindness -= 0.1f;
+            stats.honesty -= 0.1f;
+            statChangeDisplay.DisplayStatChange("Kindness: -0.1", Color.red);
+            statChangeDisplay.DisplayStatChange("Honesty: -0.1", Color.red);
         }
         else if (lastHitObject!=null && lastHitObject.CompareTag("Wood"))
         {
@@ -190,6 +198,9 @@ public class PlayerRaycast : MonoBehaviour
             inventory.wood++;
             prompt.SetActive(false);
             pickupUI.DisplayPickup("Wood", 1);
+            stats.determination += 0.1f;
+            statChangeDisplay.DisplayStatChange("Determination: +0.1", Color.green);
+
         }
         else if(lastHitObject!=null && lastHitObject.CompareTag("StolenApple"))
         {
@@ -199,6 +210,8 @@ public class PlayerRaycast : MonoBehaviour
             stats.kindness -= 0.1f;
             stats.honesty -= 0.1f;
             prompt.SetActive(false);
+            statChangeDisplay.DisplayStatChange("Kindness: -0.1", Color.red);
+            statChangeDisplay.DisplayStatChange("Honesty: -0.1", Color.red);
         }
         else
         {
