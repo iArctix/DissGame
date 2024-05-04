@@ -11,6 +11,7 @@ public class PlayerRaycast : MonoBehaviour
     public TextMeshProUGUI prompttext;
 
     public InventoryStats inventory;
+    public PersonalityStats stats;
     public PickupUI pickupUI;
 
     void Start()
@@ -58,6 +59,14 @@ public class PlayerRaycast : MonoBehaviour
                     lastHitObject = hit.collider.gameObject;
                 }
             }
+            else if(hit.collider.CompareTag("StolenApple"))
+            {
+                if (hit.collider.gameObject != lastHitObject)
+                {
+                    StolenAppleHit();
+                    lastHitObject = hit.collider.gameObject;
+                }
+            }
         }
         else
         {
@@ -75,6 +84,10 @@ public class PlayerRaycast : MonoBehaviour
                 else if (lastHitObject.CompareTag("Wood"))
                 {
                     WoodNotHit();
+                }
+                else if(lastHitObject.CompareTag("StolenApple"))
+                {
+                    StolenAppleNotHit();
                 }
                 lastHitObject = null;
             }
@@ -130,6 +143,19 @@ public class PlayerRaycast : MonoBehaviour
         prompttext.text = " ";
         prompt.SetActive(false);
     }
+    void StolenAppleHit()
+    {
+       
+        prompttext.text = "Press E TO Steal Apple";
+        prompt.SetActive(true);
+
+    }
+    void StolenAppleNotHit()
+    {
+      
+        prompttext.text = " ";
+        prompt.SetActive(false);
+    }
 
     void InteractPressed()
     {
@@ -138,6 +164,8 @@ public class PlayerRaycast : MonoBehaviour
             Destroy(lastHitObject);
             inventory.apples++;
             pickupUI.DisplayPickup("Apple", 1);
+            stats.determination += 0.05f;
+            stats.honesty += 0.05f;
 
             prompt.SetActive(false); // Deactivate prompt after deleting the apple
         }
@@ -154,6 +182,15 @@ public class PlayerRaycast : MonoBehaviour
             inventory.wood++;
             prompt.SetActive(false);
             pickupUI.DisplayPickup("Wood", 1);
+        }
+        else if(lastHitObject!=null && lastHitObject.CompareTag("StolenApple"))
+        {
+            Destroy(lastHitObject);
+            inventory.apples++;
+            pickupUI.DisplayPickup("Stolen Apple", 1);
+            stats.kindness -= 0.1f;
+            stats.honesty -= 0.1f;
+            prompt.SetActive(false);
         }
         else
         {
