@@ -500,7 +500,7 @@ public class BillMenu : MonoBehaviour
                 stats.determination -= 0.2f;
                 statChangeDisplay.DisplayStatChange("Determination: +0.2", Color.red);
                 stats.kindness -= 0.4f;
-                statChangeDisplay.DisplayStatChange("Kindness: -0.4", Color.green);
+                statChangeDisplay.DisplayStatChange("Kindness: -0.4", Color.red);
                 stats.honesty += 0.2f;
                 statChangeDisplay.DisplayStatChange("Honesty: +0.2", Color.green);
                 stats.empathy -= 0.4f;
