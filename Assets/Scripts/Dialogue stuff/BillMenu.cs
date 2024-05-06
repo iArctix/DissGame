@@ -271,9 +271,9 @@ public class BillMenu : MonoBehaviour
         {
             stats.activequestnum++;
             stats.kindness += 0.1f;
-            statChangeDisplay.DisplayStatChange("Kindess: +0.1f", Color.green);
+            statChangeDisplay.DisplayStatChange("Kindess: +0.1", Color.green);
             stats.empathy += 0.1f;
-            statChangeDisplay.DisplayStatChange("Empathy: +0.1f", Color.green);
+            statChangeDisplay.DisplayStatChange("Empathy: +0.1", Color.green);
         }
         else if (stats.activequestnum == 6)
         {

@@ -233,7 +233,7 @@ public class FredMenu : MonoBehaviour
                 button2.text = "";
                 button3.text = "";
                 button4.text = "";
-                Dialogue.text = "Thanks for nothing... The queen wants to see you now you have 'finsihed' your tasks ";
+                Dialogue.text = "Thanks for nothing... The queen wants to see you now you have 'finished' your tasks ";
             }
         }
         else if (stats.activequestnum == 11)
