@@ -203,27 +203,38 @@ public class FredMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 8)
         {
-            button1.text = "";
-            button2.text = "";
+            button1.text = "Yes i will go looking right away";
+            button2.text = "Hmm i hope this is worth my while why do i have to do it ";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Oh hello the queen sent you thank heavens, i lost my sword in the forest could you maybe go find it for me i would appreciate it";
         }
         else if (stats.activequestnum == 9)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
+            button1.text = "Here it is i found it";
+            button2.text = "I found it but could you pay me for it (need 0.6 charisma) (+ 40 coins)";
+            button3.text = "How about i just give you some money to replace it (-50 coins)";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Please return it to me it was in the woods when i last had it";
         }
         else if (stats.activequestnum == 10)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+           if(stats.npc2 == 2 || stats.npc2 == 3)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Thanks for the help i really appreciate it good sir, i think the wueen wants to see you now you have completes your tasks";
+            }
+           else if (stats.npc2 ==1)
+            {
+                button1.text = "";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Thanks for nothing... The queen wants to see you now you have 'finsihed' your tasks ";
+            }
         }
         else if (stats.activequestnum == 11)
         {
@@ -231,7 +242,7 @@ public class FredMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "The queen wants to give you your verdict go talk to her good luck ";
         }
         else if (stats.activequestnum == 12)
         {
@@ -301,10 +312,22 @@ public class FredMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 8)
         {
-
+            stats.activequestnum ++;
+            stats.kindness += 0.2f;
+            statChangeDisplay.DisplayStatChange("Kindness: +0.2", Color.green);
+            stats.determination += 0.2f;
+            statChangeDisplay.DisplayStatChange("Determination: +0.2", Color.green);
+            stats.charisma += 0.2f;
+            statChangeDisplay.DisplayStatChange("Charisma: +0.2", Color.green);
         }
         else if (stats.activequestnum == 9)
         {
+            stats.activequestnum++;
+            stats.kindness+= 0.2f;
+            statChangeDisplay.DisplayStatChange("Kindness: +0.2", Color.green);
+            stats.determination += 0.3f;
+            statChangeDisplay.DisplayStatChange("Determination: +0.3", Color.green);
+            stats.npc2 += 1;
 
         }
         else if (stats.activequestnum == 10)
@@ -385,11 +408,30 @@ public class FredMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 8)
         {
-
+            stats.activequestnum ++;
+            stats.activequestnum++;
+            stats.kindness -= 0.2f;
+            statChangeDisplay.DisplayStatChange("Kindness: -0.2", Color.red);
+            stats.determination -= 0.3f;
+            statChangeDisplay.DisplayStatChange("Determination: -0.3", Color.red);
+            stats.charisma -= 0.3f;
+            statChangeDisplay.DisplayStatChange("Charisma: -0.3", Color.red);
         }
         else if (stats.activequestnum == 9)
         {
-
+            if(stats.charisma >= 0.6)
+            {
+                stats.activequestnum++;
+                stats.kindness -= 0.3f;
+                statChangeDisplay.DisplayStatChange("Kindness: -0.2", Color.red);
+                stats.determination -= 0.2f;
+                statChangeDisplay.DisplayStatChange("Determination: -0.3", Color.red);
+                stats.honesty += 0.1f;
+                statChangeDisplay.DisplayStatChange("Honesty: +0.1", Color.green);
+                stats.npc2 -= 1;
+                inventory.coins += 40;
+            }
+            
         }
         else if (stats.activequestnum == 10)
         {
@@ -440,6 +482,19 @@ public class FredMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 9)
         {
+            if(inventory.coins > 50)
+            {
+                stats.activequestnum++;
+                stats.kindness -= 0.2f;
+                statChangeDisplay.DisplayStatChange("Kindness: -0.2", Color.red);
+                stats.determination -= 0.3f;
+                statChangeDisplay.DisplayStatChange("Determination: -0.3", Color.red);
+                inventory.coins -= 50;  
+            }
+          
+
+       
+
 
         }
         else if (stats.activequestnum == 10)

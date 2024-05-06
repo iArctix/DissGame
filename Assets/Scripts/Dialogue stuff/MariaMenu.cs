@@ -124,13 +124,13 @@ public class MariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 7)
         {
-            button1.text = "";
-            button2.text = "";
+            button1.text = "Okay sounds good queen i will go help";
+            button2.text = "Another chore when will i be free...";
             button3.text = "";
             button4.text = "";
             if (stats.npc1 == 1)
             {
-                Dialogue.text = "Well you helped him but in a not very nice way we dont like that kin dof behaviour here. Anyway next i wnat you to help out fred find him in town near me";
+                Dialogue.text = "Well you helped him but in a not very nice way we dont like that kind of behaviour here!! Anyway next i want you to help out fred find him in town near me";
             }
             else if (stats.npc1 == 2)
             {
@@ -147,7 +147,7 @@ public class MariaMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Fred is in the town near me he wants your help, this will be your last task";
         }
         else if (stats.activequestnum == 9)
         {
@@ -155,15 +155,15 @@ public class MariaMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Complete freds taska nd then return to me";
         }
         else if (stats.activequestnum == 10)
         {
-            button1.text = "";
+            button1.text = "Yes queen im ready";
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "Ok so you ahve completed your tasks and i have made up my mind about you. Would you like to hear if i deem you worthy of living here?";
         }
         else if (stats.activequestnum ==11)
         {
@@ -224,7 +224,13 @@ public class MariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 7)
         {
-
+            stats.activequestnum++;
+            stats.kindness += 0.1f;
+            statChangeDisplay.DisplayStatChange("Kindness: +0.1", Color.green);
+            stats.charisma += 0.1f;
+            statChangeDisplay.DisplayStatChange("Charisma: +0.1", Color.green);
+            stats.determination += 0.2f;
+            statChangeDisplay.DisplayStatChange("Determination: +0.2", Color.green);
         }
         else if (stats.activequestnum == 8)
         {
@@ -236,7 +242,7 @@ public class MariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 10)
         {
-
+            stats.activequestnum++;
         }
         else if (stats.activequestnum == 11)
         {
@@ -292,7 +298,13 @@ public class MariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 7)
         {
-
+            stats.activequestnum++;
+            stats.kindness += 0.1f;
+            statChangeDisplay.DisplayStatChange("Kindness: -0.2", Color.red);
+            stats.charisma += 0.1f;
+            statChangeDisplay.DisplayStatChange("Charisma: -0.3", Color.red);
+            stats.determination += 0.2f;
+            statChangeDisplay.DisplayStatChange("Determination: -0.4", Color.red);
         }
         else if (stats.activequestnum == 8)
         {

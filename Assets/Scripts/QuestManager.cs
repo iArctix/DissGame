@@ -52,20 +52,20 @@ public class QuestManager : MonoBehaviour
         }
         else if (stats.activequestnum == 8)
         {
-
+            questprompt.text = "Talk to Fred in the town";
         }
         else if (stats.activequestnum == 9)
         {
-
+            questprompt.text = "Find Freds lost ";
 
         }
         else if (stats.activequestnum == 10)
         {
-
+            questprompt.text = "";
         }
         else if (stats.activequestnum == 11)
         {
-
+            questprompt.text = "";
         }
         else if (stats.activequestnum == 12)
         {

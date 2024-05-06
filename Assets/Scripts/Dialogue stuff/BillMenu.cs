@@ -186,7 +186,7 @@ public class BillMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "I think fred wants your help he is waiting in the village";
         }
         else if (stats.activequestnum == 9)
         {
@@ -194,7 +194,7 @@ public class BillMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "I heard freds lost sword is in the woods somewhere";
         }
         else if (stats.activequestnum == 10)
         {
@@ -202,7 +202,7 @@ public class BillMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "I think the queen wants to hear from you since u have finished your tasks";
         }
         else if (stats.activequestnum == 11)
         {
@@ -210,7 +210,7 @@ public class BillMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "";
+            Dialogue.text = "The queen wants to give you her verdict good luck";
         }
         else if (stats.activequestnum == 12)
         {
@@ -270,6 +270,10 @@ public class BillMenu : MonoBehaviour
         else if (stats.activequestnum == 5)
         {
             stats.activequestnum++;
+            stats.kindness += 0.1f;
+            statChangeDisplay.DisplayStatChange("Kindess: +0.1f", Color.green);
+            stats.empathy += 0.1f;
+            statChangeDisplay.DisplayStatChange("Empathy: +0.1f", Color.green);
         }
         else if (stats.activequestnum == 6)
         {
@@ -363,6 +367,10 @@ public class BillMenu : MonoBehaviour
         else if (stats.activequestnum == 5)
         {
             stats.activequestnum++;
+            stats.kindness -= 0.2f;
+            statChangeDisplay.DisplayStatChange("Kindess: -0.2f", Color.red);
+            stats.empathy -= 0.3f;
+            statChangeDisplay.DisplayStatChange("Empathy: -0.3f", Color.red);
         }
         else if (stats.activequestnum == 6)
         {
