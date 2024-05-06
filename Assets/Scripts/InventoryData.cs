@@ -10,5 +10,6 @@ public class InventoryStats : ScriptableObject
     public int coins;
     public int apples;
     public int wood;
+    public bool swordfound =false;
 
 }

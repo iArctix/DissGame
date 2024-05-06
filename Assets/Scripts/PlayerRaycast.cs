@@ -69,6 +69,14 @@ public class PlayerRaycast : MonoBehaviour
                     lastHitObject = hit.collider.gameObject;
                 }
             }
+            else if(hit.collider.CompareTag("Sword"))
+            {
+                if (hit.collider.gameObject != lastHitObject)
+                {
+                    SwordHit();
+                    lastHitObject = hit.collider.gameObject;
+                }
+            }
         }
         else
         {
@@ -91,6 +99,10 @@ public class PlayerRaycast : MonoBehaviour
                 {
                     StolenAppleNotHit();
                 }
+                else if(lastHitObject.CompareTag("Sword"))
+                {
+                    SwordNotHit();
+                }
                 lastHitObject = null;
             }
         }
@@ -100,7 +112,18 @@ public class PlayerRaycast : MonoBehaviour
             InteractPressed();
         }
     }
-
+    void SwordHit()
+    {
+        prompttext.text = "Press E TO Pickup Lost Sword";
+        prompttext.color = Color.blue;
+        prompt.SetActive(true);
+    }
+    void SwordNotHit()
+    {
+        prompttext.text = " ";
+        prompt.SetActive(false);
+        prompttext.color = Color.white;
+    }
     void AppleHit()
     {
         Debug.Log("Apple was hit!");
@@ -212,6 +235,14 @@ public class PlayerRaycast : MonoBehaviour
             prompt.SetActive(false);
             statChangeDisplay.DisplayStatChange("Kindness: -0.1", Color.red);
             statChangeDisplay.DisplayStatChange("Honesty: -0.1", Color.red);
+        }
+        else if (lastHitObject != null && lastHitObject.CompareTag("Coin"))
+        {
+            Destroy(lastHitObject);
+            prompt.SetActive(false);
+            pickupUI.DisplayPickup("Lost Sword", 1);
+            inventory.swordfound = true;
+           
         }
         else
         {

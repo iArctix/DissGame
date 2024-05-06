@@ -320,7 +320,7 @@ public class FredMenu : MonoBehaviour
             stats.charisma += 0.2f;
             statChangeDisplay.DisplayStatChange("Charisma: +0.2", Color.green);
         }
-        else if (stats.activequestnum == 9)
+        else if (stats.activequestnum == 9 && inventory.swordfound)
         {
             stats.activequestnum++;
             stats.kindness+= 0.2f;
@@ -419,7 +419,7 @@ public class FredMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 9)
         {
-            if(stats.charisma >= 0.6)
+            if(stats.charisma >= 0.6 && inventory.swordfound)
             {
                 stats.activequestnum++;
                 stats.kindness -= 0.3f;

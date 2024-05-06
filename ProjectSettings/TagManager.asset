@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Wood
   - StolenApple
+  - Sword
   layers:
   - Default
   - TransparentFX
