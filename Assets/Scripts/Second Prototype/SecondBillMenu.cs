@@ -22,7 +22,7 @@ public class SecondBillMenu : MonoBehaviour
 
     public InventoryStats inventory;
 
-    public StatChangeDisplay statChangeDisplay;
+
 
     private void OnTriggerEnter(Collider other)
     {

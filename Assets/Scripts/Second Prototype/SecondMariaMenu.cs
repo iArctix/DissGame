@@ -22,7 +22,7 @@ public class SecondMariaMenu : MonoBehaviour
     public TextMeshProUGUI Dialogue;
 
     public InventoryStats inventory;
-    public StatChangeDisplay statChangeDisplay;
+ 
 
     private void OnTriggerEnter(Collider other)
     {
