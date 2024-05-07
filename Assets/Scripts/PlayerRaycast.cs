@@ -207,9 +207,9 @@ public class PlayerRaycast : MonoBehaviour
         else if (lastHitObject != null && lastHitObject.CompareTag("Coin"))
         {
             Destroy(lastHitObject);
-            inventory.coins++;
+            inventory.coins+= 10;
             prompt.SetActive(false);
-            pickupUI.DisplayPickup("Coin", 1);
+            pickupUI.DisplayPickup("Coin", 10);
             stats.kindness -= 0.1f;
             stats.honesty -= 0.1f;
             statChangeDisplay.DisplayStatChange("Kindness: -0.1", Color.red);

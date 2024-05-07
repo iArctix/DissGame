@@ -8,10 +8,24 @@ public class QuestManager : MonoBehaviour
 {
     public PersonalityStats stats;
     public TextMeshProUGUI questprompt;
+    public InventoryStats inventory;
 
     // Start is called before the first frame update
     private void Start()
     {
+        stats.charisma = 0.4f;
+        stats.kindness = 0.4f;
+        stats.honesty = 0.4f;
+        stats.determination = 0.4f;
+        stats.empathy = 0.4f;
+        stats.activequestnum = 1;
+        stats.npc1 = 2;
+        stats.npc2 = 2;
+        stats.npc3 = 2;
+
+        inventory.apples = 0;
+        inventory.wood = 0;
+        inventory.coins = 0;
         stats.activequestnum = 1;
     }
     // Update is called once per frame

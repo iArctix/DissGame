@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4237985659cfea449cd321ccff1b090, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
-  coins: 100
-  apples: 4
+  coins: 0
+  apples: 0
   wood: 0
+  swordfound: 1

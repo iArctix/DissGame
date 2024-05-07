@@ -156,7 +156,7 @@ public class MariaMenu : MonoBehaviour
             button2.text = "";
             button3.text = "";
             button4.text = "";
-            Dialogue.text = "Complete freds taska nd then return to me";
+            Dialogue.text = "Complete freds task and then return to me";
         }
         else if (stats.activequestnum == 10)
         {
