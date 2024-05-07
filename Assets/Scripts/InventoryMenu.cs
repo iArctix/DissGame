@@ -17,6 +17,7 @@ public class InventoryMenu : MonoBehaviour
     {
         openmenu();
         inventorystats();
+
  
     }
 

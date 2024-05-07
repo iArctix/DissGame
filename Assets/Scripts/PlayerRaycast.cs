@@ -236,7 +236,7 @@ public class PlayerRaycast : MonoBehaviour
             statChangeDisplay.DisplayStatChange("Kindness: -0.1", Color.red);
             statChangeDisplay.DisplayStatChange("Honesty: -0.1", Color.red);
         }
-        else if (lastHitObject != null && lastHitObject.CompareTag("Coin"))
+        else if (lastHitObject != null && lastHitObject.CompareTag("Sword"))
         {
             Destroy(lastHitObject);
             prompt.SetActive(false);

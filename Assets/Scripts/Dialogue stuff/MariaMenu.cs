@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MariaMenu : MonoBehaviour
 {
@@ -167,11 +168,30 @@ public class MariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum ==11)
         {
-            button1.text = "";
-            button2.text = "";
-            button3.text = "";
-            button4.text = "";
-            Dialogue.text = "";
+           if(stats.overallstat > 4.5)
+            {
+                button1.text = "Back To Menu";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "After you have been through the town meeting my subjects ive heard nothing but good things of the way you handle yourself .I would glady allow you to live here and even better i will allow you to live in one of our already built houses to show my gratitude";
+            }
+           else if (stats.overallstat >= 3 && stats.overallstat <=4.5)
+            {
+                button1.text = "Back to Menu";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "Overall you have been quote nice to my subjects and made a majority of good decsions and choices therefore i will allow you to move to my town but i want you to pay for your own housinga nd supplies. That would be all";
+            }
+           else if (stats.overallstat <= 2.99)
+            {
+                button1.text = "Back to Menu";
+                button2.text = "";
+                button3.text = "";
+                button4.text = "";
+                Dialogue.text = "From what ive heard you havent handled yourself very well around here and from the way you have handled yourself we wouldnt want someone like you around here so you shall be banished from my town, Be gone before i get the guards";
+            }
         }
         else if (stats.activequestnum == 12)
         {
@@ -246,7 +266,7 @@ public class MariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 11)
         {
-
+            SceneManager.LoadScene(0);
         }
         else if (stats.activequestnum == 12)
         {

@@ -18,6 +18,7 @@ public class QuestManager : MonoBehaviour
     void Update()
     {
         QuestHelp();
+        stats.overallstat = stats.kindness + stats.charisma + stats.determination + stats.empathy + stats.honesty;
     }
 
     void QuestHelp()
@@ -44,7 +45,7 @@ public class QuestManager : MonoBehaviour
         }
         else if (stats.activequestnum == 6)
         {
-            questprompt.text = "Help Bill with his problem, gather wood or pay him";
+            questprompt.text = "Help Bill with his problem, gather wood or pay him (gather fallen logs or stumps)";
         }
         else if (stats.activequestnum == 7)
         {
@@ -56,12 +57,12 @@ public class QuestManager : MonoBehaviour
         }
         else if (stats.activequestnum == 9)
         {
-            questprompt.text = "Find Freds lost ";
+            questprompt.text = "Find Freds lost sword";
 
         }
         else if (stats.activequestnum == 10)
         {
-            questprompt.text = "";
+            questprompt.text = "Talk to the Queen";
         }
         else if (stats.activequestnum == 11)
         {

@@ -225,7 +225,7 @@ public class FredMenu : MonoBehaviour
                 button2.text = "";
                 button3.text = "";
                 button4.text = "";
-                Dialogue.text = "Thanks for the help i really appreciate it good sir, i think the wueen wants to see you now you have completes your tasks";
+                Dialogue.text = "Thanks for the help i really appreciate it good sir, i think the queen wants to see you now you have completes your tasks";
             }
            else if (stats.npc2 ==1)
             {

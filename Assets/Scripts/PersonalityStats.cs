@@ -14,6 +14,8 @@ public class PersonalityStats : ScriptableObject
     public float empathy = 0.5f;
     public float charisma = 0.5f;
 
+    public float overallstat;
+
     //Relationship stats level 1-3
     //bill
     public float npc1 = 2f;
