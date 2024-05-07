@@ -278,7 +278,7 @@ public class MariaMenu : MonoBehaviour
     {
         if (stats.activequestnum == 1)
         {
-            stats.activequestnum++;
+          
             stats.activequestnum++;
             stats.kindness -= 0.1f;
             statChangeDisplay.DisplayStatChange("Kindess: -0.1", Color.red);

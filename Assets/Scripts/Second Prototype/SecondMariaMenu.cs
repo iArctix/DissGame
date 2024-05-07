@@ -78,7 +78,7 @@ public class SecondMariaMenu : MonoBehaviour
         if (stats.activequestnum == 1)
         {
             button1.text = "Okay i happily will thankyou for the welcome";
-            button2.text = "Okay i guess";
+            button2.text = "";
             button3.text = "";
             button4.text = "";
             Dialogue.text = "Hello Welcome to my town to live here you may have to do some tasks first. Please go either help the villager or the peasant ";
@@ -102,8 +102,8 @@ public class SecondMariaMenu : MonoBehaviour
         else if (stats.activequestnum == 4)
         {
             button1.text = "Okay i will happily go talk i want to live here";
-            button2.text = "Why would i want to live here anyway but okay fine";
-            button3.text = "Okay if i help could you make it worth my while? (+20 coins) (Need 0.8 charisma)";
+            button2.text = "";
+            button3.text = "";
             button4.text = "";
             Dialogue.text = "Hello there thanks for helping my villager, if you want to live here more work must be done, now next i want you to help bill he wanted to talk";
         }
@@ -126,21 +126,10 @@ public class SecondMariaMenu : MonoBehaviour
         else if (stats.activequestnum == 7)
         {
             button1.text = "Okay sounds good queen i will go help";
-            button2.text = "Another chore when will i be free...";
+            button2.text = "";
             button3.text = "";
             button4.text = "";
-            if (stats.npc1 == 1)
-            {
-                Dialogue.text = "Well you helped him but in a not very nice way we dont like that kind of behaviour here!! Anyway next i want you to help out fred find him in town near me";
-            }
-            else if (stats.npc1 == 2)
-            {
-                Dialogue.text = "Thanks for helping him out thats kind of you. Anyway next i want you to help out fred find him in town near me ";
-            }
-            else
-            {
-                Dialogue.text = "You have been really kind to Bill he sees you as a friend now  Anyway next i want you to help out fred find him in town near me";
-            }
+            Dialogue.text = "Thanks for helping him out thats kind of you. Anyway next i want you to help out fred find him in town near me ";
         }
         else if (stats.activequestnum == 8)
         {
@@ -168,30 +157,11 @@ public class SecondMariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 11)
         {
-            if (stats.overallstat > 4.5)
-            {
-                button1.text = "Back To Menu";
-                button2.text = "";
-                button3.text = "";
-                button4.text = "";
-                Dialogue.text = "After you have been through the town meeting my subjects ive heard nothing but good things of the way you handle yourself .I would glady allow you to live here and even better i will allow you to live in one of our already built houses to show my gratitude";
-            }
-            else if (stats.overallstat >= 3 && stats.overallstat <= 4.5)
-            {
-                button1.text = "Back to Menu";
-                button2.text = "";
-                button3.text = "";
-                button4.text = "";
-                Dialogue.text = "Overall you have been quote nice to my subjects and made a majority of good decsions and choices therefore i will allow you to move to my town but i want you to pay for your own housinga nd supplies. That would be all";
-            }
-            else if (stats.overallstat <= 2.99)
-            {
-                button1.text = "Back to Menu";
-                button2.text = "";
-                button3.text = "";
-                button4.text = "";
-                Dialogue.text = "From what ive heard you havent handled yourself very well around here and from the way you have handled yourself we wouldnt want someone like you around here so you shall be banished from my town, Be gone before i get the guards";
-            }
+            button1.text = "Back To Menu";
+            button2.text = "";
+            button3.text = "";
+            button4.text = "";
+            Dialogue.text = "After you have been through the town meeting my subjects ive heard nothing but good things of the way you handle yourself .I would glady allow you to live here and even better i will allow you to live in one of our already built houses to show my gratitude";
         }
         else if (stats.activequestnum == 12)
         {
@@ -208,13 +178,7 @@ public class SecondMariaMenu : MonoBehaviour
         if (stats.activequestnum == 1)
         {
             stats.activequestnum++;
-            stats.kindness += 0.1f;
-            statChangeDisplay.DisplayStatChange("Kindness: +0.2", Color.green);
-
-            stats.charisma += 0.2f;
-            statChangeDisplay.DisplayStatChange("Charisma: +0.2", Color.green);
-            stats.determination += 0.2f;
-            statChangeDisplay.DisplayStatChange("Determination: +0.2", Color.green);
+          
         }
         else if (stats.activequestnum == 2)
         {
@@ -227,12 +191,6 @@ public class SecondMariaMenu : MonoBehaviour
         else if (stats.activequestnum == 4)
         {
             stats.activequestnum++;
-            stats.npc3 += 1;
-            stats.kindness += 0.2f;
-            statChangeDisplay.DisplayStatChange("Kindness: +0.2", Color.green);
-            stats.charisma += 0.2f;
-            statChangeDisplay.DisplayStatChange("Charisma: +0.2", Color.green);
-
         }
         else if (stats.activequestnum == 5)
         {
@@ -245,12 +203,6 @@ public class SecondMariaMenu : MonoBehaviour
         else if (stats.activequestnum == 7)
         {
             stats.activequestnum++;
-            stats.kindness += 0.1f;
-            statChangeDisplay.DisplayStatChange("Kindness: +0.1", Color.green);
-            stats.charisma += 0.1f;
-            statChangeDisplay.DisplayStatChange("Charisma: +0.1", Color.green);
-            stats.determination += 0.2f;
-            statChangeDisplay.DisplayStatChange("Determination: +0.2", Color.green);
         }
         else if (stats.activequestnum == 8)
         {
@@ -278,16 +230,9 @@ public class SecondMariaMenu : MonoBehaviour
     {
         if (stats.activequestnum == 1)
         {
-            stats.activequestnum++;
-            stats.activequestnum++;
-            stats.kindness -= 0.1f;
-            statChangeDisplay.DisplayStatChange("Kindess: -0.1", Color.red);
-            stats.charisma += 0.1f;
-            statChangeDisplay.DisplayStatChange("Charisma: +0.1", Color.green);
-            stats.determination -= 0.2f;
-            statChangeDisplay.DisplayStatChange("Determination: -0.2", Color.red);
-            stats.honesty += 0.1f;
-            statChangeDisplay.DisplayStatChange("Honesty: +0.1", Color.green);
+            
+           
+
         }
         else if (stats.activequestnum == 2)
         {
@@ -299,14 +244,7 @@ public class SecondMariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 4)
         {
-            stats.activequestnum++;
-            stats.npc3 -= 1;
-            stats.kindness -= 0.4f;
-            statChangeDisplay.DisplayStatChange("Kindness: -0.4", Color.red);
-            stats.charisma += 0.1f;
-            statChangeDisplay.DisplayStatChange("Charisma: +0.1", Color.green);
-            stats.honesty += 0.2f;
-            statChangeDisplay.DisplayStatChange("Honesty: +0.2", Color.green);
+          
         }
         else if (stats.activequestnum == 5)
         {
@@ -318,13 +256,7 @@ public class SecondMariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 7)
         {
-            stats.activequestnum++;
-            stats.kindness += 0.1f;
-            statChangeDisplay.DisplayStatChange("Kindness: -0.2", Color.red);
-            stats.charisma += 0.1f;
-            statChangeDisplay.DisplayStatChange("Charisma: -0.3", Color.red);
-            stats.determination += 0.2f;
-            statChangeDisplay.DisplayStatChange("Determination: -0.4", Color.red);
+           
         }
         else if (stats.activequestnum == 8)
         {
@@ -363,19 +295,7 @@ public class SecondMariaMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 4)
         {
-            if (stats.charisma >= 0.8f)
-            {
-                stats.activequestnum++;
-                inventory.coins += 20;
-                stats.kindness += 0.1f;
-                statChangeDisplay.DisplayStatChange("Kindess: +0.1", Color.green);
-                stats.charisma += 0.2f;
-                statChangeDisplay.DisplayStatChange("Charisma: +0.2", Color.green);
-                stats.honesty += 0.3f;
-                statChangeDisplay.DisplayStatChange("Honesty: +0.3", Color.green);
-                stats.empathy -= 0.3f;
-                statChangeDisplay.DisplayStatChange("Empathy: +0.2", Color.green);
-            }
+           
         }
         else if (stats.activequestnum == 5)
         {

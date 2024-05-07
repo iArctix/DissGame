@@ -408,7 +408,7 @@ public class FredMenu : MonoBehaviour
         }
         else if (stats.activequestnum == 8)
         {
-            stats.activequestnum ++;
+            
             stats.activequestnum++;
             stats.kindness -= 0.2f;
             statChangeDisplay.DisplayStatChange("Kindness: -0.2", Color.red);
